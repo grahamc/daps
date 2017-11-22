@@ -239,10 +239,13 @@ mkdir -p "${DOC_DIR}"/images/src/{dia,fig,jpg,png,svg,eps,pdf} "${DOC_DIR}/xml" 
 
 # DC-file
 cp "$DC_TEMPLATE" "$DC_FILE" || exit_on_error "Failed to copy $DC_TEMPLATE"
+chmod u+w "$DC_FILE"
 # MAIN
 cp "$MAIN_TEMPLATE" "$MAIN" || exit_on_error "Failed to copy $MAIN_TEMPLATE"
+chmod u+w "$MAIN"
 # graphics
 cp "${DAPSROOT}"/init_templates/example{1,2}.png "${IMG_DIR}/png/" || exit_on_error "Failed to copy images from $TEMPLATE_DIR}"
+chmod u+w "${IMG_DIR}"/png/example{1,2}.png
 
 #----------------
 # Adjust the content in the tempate files

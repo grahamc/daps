@@ -11,6 +11,9 @@ MY_NAME=DAPS
 VERSION=@PACKAGE_VERSION@
 MY_URL=https://opensuse.github.io/daps
 
+PATH="@path@"
+export PATH
+
 export MY_NAME VERSION MY_URL
 
 # autoconf replaces @foo@ stuff with ${prefix}/.. if @foo@ has not

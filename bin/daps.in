@@ -129,7 +129,7 @@ VARLIST=(
     NOSTATIC
     NOREFCHECK
     NOVALID
-    NOXML
+    NO
     OPTIPNG
     PAGEFILES
     PARAMS
@@ -1704,6 +1704,7 @@ fi
 if [[ -n "$XML_DEVEL_CATALOG" ]]; then
     XML_CATALOG_FILES="$XML_DEVEL_CATALOG $XML_CATALOG_FILES"
 fi
+XML_CATALOG_FILES="@catalog@ $XML_CATALOG_FILES"
 export XML_CATALOG_FILES
 
 # ----------------------------------------------------------------------------

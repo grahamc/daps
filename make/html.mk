@@ -221,7 +221,7 @@ ifneq "$(IS_STATIC)" "static"
 	$(HTML_GRAPH_COMMAND) $(STYLEIMG) $(HTML_DIR)/static
     else
 	tar cph --exclude-vcs -C $(dir $<) images | \
-          (cd $(HTML_DIR)/static; tar xpv) >/dev/null
+          (cd $(HTML_DIR)/static; tar xv) >/dev/null
     endif
 else
   copy_static_images_html: | $(HTML_DIR)/static
@@ -233,7 +233,7 @@ else
 	$(HTML_GRAPH_COMMAND) $</* $(HTML_DIR)/static
     else
 	tar cph --exclude-vcs -C $(dir $<) static | \
-	  (cd $(HTML_DIR); tar xpv) >/dev/null
+	  (cd $(HTML_DIR); tar xv) >/dev/null
     endif
 endif
 ifdef HTML_CSS
